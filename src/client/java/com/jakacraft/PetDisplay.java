@@ -25,7 +25,7 @@ public class PetDisplay implements ClientModInitializer {
     private static String petName = "";
     private static int petLevel = 0;
     private static boolean inPetsScreen = false;
-    private  static int levelColor = 0xAAAAFF;
+    private static int levelColor = 0xAAAAFF;
 
     @Override
     public void onInitializeClient() {
