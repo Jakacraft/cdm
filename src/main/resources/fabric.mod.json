@@ -19,7 +19,7 @@
     "client": [
       "com.jakacraft.caffeinedungeons.client.CaffeinedungeonsClient",
       "com.jakacraft.PetDisplay",
-      "com.jakacraft.Fishing"
+      "com.jakacraft.AbilityDisplay"
     ],
     "main": [
       "com.jakacraft.caffeinedungeons.Caffeinedungeons"
