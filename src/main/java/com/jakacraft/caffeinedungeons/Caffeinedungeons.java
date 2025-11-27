@@ -9,8 +9,8 @@ public class Caffeinedungeons implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Caffeinating Dungeons");
+        LOGGER.info("CDM: Caffeinating Dungeons");
         caffeinedungeonsConfig.load();
-        LOGGER.info("Dungeons Caffeinated");
+        LOGGER.info("CDM: Dungeons Caffeinated");
     }
 }
