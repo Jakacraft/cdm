@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.font.Font;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
 
@@ -59,12 +60,15 @@ public class AbilityDisplay implements ClientModInitializer {
         int y = AbilityHudY;
         float scale = AbilityHudScale;
         TextRenderer renderer = client.textRenderer;
+        int frenzyminutes = (FrenzyTimer / 20) / 60;
+        int frenzyseconds = (FrenzyTimer / 20) % 60;
+        String frenzyformat = String.format("%02d:%02d", frenzyminutes, frenzyseconds);
 
         context.getMatrices().push();
         context.getMatrices().translate(x / scale, y/ scale, 0);
         context.getMatrices().scale(scale, scale, 1.0f);
 
-        context.drawText(renderer, "+75% Fishing Experience " + FrenzyTimer/20, 0, 0, 0x55FFFF, false);
+        context.drawText(renderer, "+75% Fishing Experience - " + frenzyformat, 0, 0, 0x55FFFF, false);
 
         context.getMatrices().pop();
     }
