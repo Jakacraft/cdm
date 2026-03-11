@@ -95,14 +95,20 @@ public class PetDisplay implements ClientModInitializer {
             nameColor = petNameText.getStyle().getColor().getRgb();
         }
 
-        if (petLevel >= 100)  {
-            levelColor = 0xFFDF00;
+        if (petLevel >= 150)  {
+            levelColor =0xAA0000;
         } else if (petLevel >= 125) {
-            levelColor = 0x520E7D;
-        } else if (petLevel >= 150) {
-            levelColor = 0x8B0000;
+            levelColor = 0xFF55FF;
+        } else if (petLevel >= 100) {
+            levelColor = 0xFFDF00;
+        } else if (petLevel >= 75) {
+            levelColor = 0xAA00AA;
+        } else if (petLevel >= 50) {
+            levelColor = 0x0000AA;
+        } else if (petLevel >= 25) {
+            levelColor = 0x55FF55;
         } else {
-            levelColor = 0xAAAAFF;
+            levelColor = 0xFFFFFF;
         }
 
         context.getMatrices().push();

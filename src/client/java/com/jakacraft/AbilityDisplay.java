@@ -154,7 +154,7 @@ public class AbilityDisplay implements ClientModInitializer {
         if (message.contains("Fishing Frenzy activated!")) {
             LOGGER.info("CDM: Fishing Frenzy Ability Detected");
             FishingFrenzy = true;
-            FrenzyTimer = 180*20;
+            FrenzyTimer = 60*20;
     }}
     private static void superchargeChat(String message) {
         if (message.contains("Used Supercharge!")) {
@@ -193,7 +193,7 @@ public class AbilityDisplay implements ClientModInitializer {
           AdvancedPartsTimer = 30*20;
     }}
     private static void ExtremeExcavationChat(String message) {
-        if (message.contains("Used Extreme Excavation!")) {
+        if (message.contains("Activated a Fluorescent Frenzy!")) {
             LOGGER.info("CDM: Extreme Excavation Ability Detected");
             ExtremeExcavation = true;
             ExtremeExcavationTimer = 20*20;
@@ -255,29 +255,24 @@ public class AbilityDisplay implements ClientModInitializer {
         context.getMatrices().scale(scale, scale, 1.0f);
 
         if (FishingFrenzy == true) {
-            context.drawText(renderer, "+75% Fishing Experience - " + frenzyformat, 0, line * spacing, 0x55FFFF, false);line++; }
+            context.drawText(renderer, "Fishing Frenzy - " + frenzyformat, 0, line * spacing, 0x55FFFF, false);line++; }
         if (Supercharge == true) {
-            context.drawText(renderer, "+200% Mining Speed - " + superchargeformat, 0, line * spacing, 0x00AAAA, false); line++;
-            context.drawText(renderer, "+50 Mining Fortune - " + superchargeformat, 0, line * spacing, 0xFFAA00, false); line++;
+            context.drawText(renderer, "Supercharge - " + superchargeformat, 0, line * spacing, 0x00AAAA, false); line++;
         }
         if (LuxSpeed == true) {
-            context.drawText(renderer, "+200% Mining Speed - " + luxspeedformat, 0, line * spacing, 0x00AAAA, false); line++;
+            context.drawText(renderer, "Luxurious Speed - " + luxspeedformat, 0, line * spacing, 0x00AAAA, false); line++;
         }
         if (EmeraldFocus == true) {
-            context.drawText(renderer, "+100% Mining Speed - " + emeraldfocusformat, 0, line * spacing, 0x00AAAA, false); line++;
-            context.drawText(renderer, "+2 Mining Hits - " + emeraldfocusformat, 0, line * spacing, 0xAA0000, false); line++;
+            context.drawText(renderer, "Emerald Focus - " + emeraldfocusformat, 0, line * spacing, 0x00AAAA, false); line++;
         }
         if (DiamondFocus == true) {
-            context.drawText(renderer, "+100% Mining Speed - " + diamondfocusformat, 0, line * spacing, 0x00AAAA, false); line++;
-            context.drawText(renderer, "+100% Mining Fortune - " + diamondfocusformat, 0, line * spacing, 0xFFAA00, false); line++;
-            context.drawText(renderer, "+4 Mining Hits - " + diamondfocusformat, 0, line * spacing, 0xAA0000, false); line++;
+            context.drawText(renderer, "Diamond Focus - " + diamondfocusformat, 0, line * spacing, 0x00AAAA, false); line++;
         }
         if (SpeedEnhancement == true) {
-            context.drawText(renderer, "+100% Mining Speed - " + speedenhancementformat, 0, line * spacing, 0x00AAAA, false); line++;
+            context.drawText(renderer, "Speed Enhancement - " + speedenhancementformat, 0, line * spacing, 0x00AAAA, false); line++;
         }
         if (AdvancedParts == true) {
-            context.drawText(renderer, "+50% Mining Speed - " + advancedpartsformat, 0, line * spacing, 0x00AAAA, false); line++;
-            context.drawText(renderer, "+35 Mining Mob Fortune - " + advancedpartsformat, 0, line * spacing, 0xFFAA00, false); line++;
+            context.drawText(renderer, "Advanced Parts - " + advancedpartsformat, 0, line * spacing, 0x00AAAA, false); line++;
         }
         if (ExtremeExcavation == true) {
             context.drawText(renderer, "Fluorescent Frenzy - " + extremeexcavationformat, 0, line * spacing, 0xAA0000, false); line++;
